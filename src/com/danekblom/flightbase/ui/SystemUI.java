@@ -117,6 +117,9 @@ public class SystemUI {
 
 	}
 
+	/**
+	 * Method to show the application screen. called on start only.
+	 */
 	private void printWelcomeSplash() {
 		System.out.println("       |");
 		System.out.println("------/|\\------------------------------");
@@ -127,6 +130,9 @@ public class SystemUI {
 		System.out.println(" /_____|_____\\");
 	}
 
+	/**
+	 * Method to call the menu. Recurring through the application.
+	 */
 	private void printMainMenu() {
 		System.out.println();
 		System.out.println("What do you wish to do today?");

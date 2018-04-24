@@ -12,11 +12,18 @@ public class FleetManager {
         // "default" constructor
     }
 
+    /**
+     * Method for adding an Airplane to the Fleet
+     * @param airplane Object of type Airplane
+     */
     public void addAirplaneToFleet(Airplane airplane) {
 
         airplaneFleet.add(airplane);
     }
 
+    /**
+     * Method to list all Airplanes in the Fleet and all booked Passengers, if any.
+     */
     public void listFleet() {
         for (Airplane airplane : airplaneFleet) {
             System.out.println(airplane.getAirplaneName() + ", " +
@@ -25,6 +32,10 @@ public class FleetManager {
         }
     }
 
+    /**
+     * Method to simulate a flight
+     * @param airplane Object of type Airplane
+     */
     public void airplaneIsUnavailable(Airplane airplane) {
         Thread t1 = new Thread(airplane.getAirplaneName());
 

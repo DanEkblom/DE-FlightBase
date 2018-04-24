@@ -1,7 +1,5 @@
 package com.danekblom.flightbase.model;
 
-import com.danekblom.flightbase.controller.FleetManager;
-
 import java.util.ArrayList;
 
 public class Airplane {
@@ -79,8 +77,6 @@ public class Airplane {
         this.numberOfOccupiedEconomySeats = numberOfOccupiedEconomySeats + 1;
     }
 
-
-
     public ArrayList<Passenger> getListBusinessPassengers() {
         return listBusinessPassengers;
     }
@@ -89,7 +85,6 @@ public class Airplane {
         this.listBusinessPassengers = listBusinessPassengers;
     }
 
-
     public ArrayList<Passenger> getListEconomyPassengers() {
         return listEconomyPassengers;
     }
@@ -97,7 +92,6 @@ public class Airplane {
     public void setListEconomyPassengers(ArrayList<Passenger> listEconomyPassengers) {
         this.listEconomyPassengers = listEconomyPassengers;
     }
-
 
     public ArrayList<Passenger> getListAllPassengers() {
         for (Passenger bp : listBusinessPassengers) {
@@ -114,17 +108,15 @@ public class Airplane {
         this.listAllPassengers = listAllPassengers;
     }
 
-
-    /*
-    public int getSeat(Passenger passenger) {
-        return getListAllPassengers().indexOf(passenger) + 2;
-    }
-    */
-
     public int getTotalNumberOfOccupiedSeats() {
         return listEconomyPassengers.size() + listBusinessPassengers.size();
     }
 
+    /**
+     * Method for adding a Passenger to the Business or Economy list, depending on chosen Ticket class.
+     * @param passenger Object of type Passenger
+     * @param list Chosen flight class list of type String
+     */
     public void addPassenger(Passenger passenger, String list) {
         if (list.equals("Business") && (listBusinessPassengers.size() < 5)) {
             listBusinessPassengers.add(passenger);
@@ -139,6 +131,12 @@ public class Airplane {
         }
     }
 
+    /**
+     * Method that is called when a new Passenger is added to a Passenger list.
+     * Checks if lists have reached max limit.
+     * @param airplane Object, Airplane
+     * @return True or false depending on whether the airplane seats are full or not
+     */
     public boolean isAirplaneFull(Airplane airplane) {
         if (airplane.getListBusinessPassengers().size() == 5 && airplane.getListEconomyPassengers().size() == 5) {
             return true;

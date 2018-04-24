@@ -15,24 +15,15 @@ public class Ticket {
     private int pDrinkCost;
     private int pConsumablesCost;
     private int pSeatNumber;
-    //private int totalCost;
 
     public Ticket() {
         // basic constructor
     }
 
-    /*
-    public Ticket(String firstName, String lastName, String ticketType, String food, int foodCost, String drink, int drinkCost) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.ticketType = ticketType;
-        this.food = food;
-        this.foodCost = foodCost;
-        this.drink = drink;
-        this.drinkCost = drinkCost;
-    }
-    */
-
+    /**
+     * Constructor with only Passenger object
+     * @param passenger Object of type Passenger
+     */
     public Ticket(Passenger passenger) {
         this.pFirstName = passenger.getFirstName();
         this.pLastName = passenger.getLastName();

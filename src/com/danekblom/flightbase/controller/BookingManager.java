@@ -12,6 +12,11 @@ import java.util.Scanner;
 
 public class BookingManager {
 
+    /**
+     * Method to create a Passenger and add him/her to an Airplane.
+     * @param sc Object of type Scanner
+     * @param airplane Object of type Airplane
+     */
     public void addPassenger(Scanner sc, Airplane airplane) {
 
         String firstName;
@@ -288,6 +293,11 @@ public class BookingManager {
         }
     }
 
+    /**
+     * Method to fetch and show a Passenger's Ticket.
+     * @param sc Object of type Scanner
+     * @param airplane Object of type Airplane
+     */
     public void findPassenger(Scanner sc, Airplane airplane) {
 
         System.out.println("Fill in your ticket ID to see your ticket:");
@@ -313,6 +323,11 @@ public class BookingManager {
         }
     }
 
+    /**
+     * Method to cancel a Passenger's Ticket.
+     * @param sc Object of type Scanner
+     * @param airplane Object of type Airplane
+     */
     public void cancelTicket(Scanner sc, Airplane airplane) {
         System.out.println("Fill in your ticket ID to cancel your ticket:");
         String ticketID = sc.next();
@@ -346,6 +361,10 @@ public class BookingManager {
         System.out.println("Your reservation is now cancelled. We hope to see you again.");
     }
 
+    /**
+     * Method to list all Passengers on the chosen Airplane
+     * @param airplane Object of type Airplane
+     */
     public void listAllPassengers(Airplane airplane) {
         ArrayList<Passenger> bList = airplane.getListBusinessPassengers();
         ArrayList<Passenger> eList = airplane.getListEconomyPassengers();
@@ -379,6 +398,10 @@ public class BookingManager {
         System.out.println("____________________________________");
     }
 
+    /**
+     * Method to list sales and profit from the chosen Airplane.
+     * @param airplane Object of type Airplane
+     */
     public void showEconomicOverview(Airplane airplane) {
         ArrayList<Passenger> businessPassagerList = airplane.getListBusinessPassengers();
         ArrayList<Passenger> economyPassagerList = airplane.getListEconomyPassengers();

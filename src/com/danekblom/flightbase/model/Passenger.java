@@ -17,6 +17,19 @@ public class Passenger {
         // Basic constructor
     }
 
+    /**
+     * Constructor with oall necessary parameters
+     * @param firstName Passenger's first name, String
+     * @param lastName Passenger's last name, String
+     * @param ticketType Passenger's ticket type (Business or Economy), String
+     * @param ticketID Passenger's unique ticket ID, String
+     * @param food Passenger's chosen food item, String
+     * @param foodCost Cost for Passenger's chosen food item, int
+     * @param drink Passenger's chosen drink item, String
+     * @param drinkCost Cost for Passenger's chosen drink item, int
+     * @param seat Passenger's seat, String
+     * @param airplane Passenger's flight. Of type Airplane
+     */
     public Passenger(String firstName, String lastName, String ticketType, String ticketID, String food, int foodCost, String drink, int drinkCost, int seat, Airplane airplane) {
         this.firstName = firstName;
         this.lastName = lastName;
